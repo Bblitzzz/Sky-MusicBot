@@ -1,4 +1,4 @@
-# rythm (Telegram bot project)
+# sky-musicbot (Telegram bot project)
 # Copyright (C) 2021  Inukaasith
 # Copyright (C) 2021  TheHamkerCat (Python_ARQ)
 # This program is free software: you can redistribute it and/or modify
@@ -33,23 +33,23 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from Python_ARQ import ARQ
 from youtube_search import YoutubeSearch
 
-from rythm.config import ARQ_API_KEY
-from rythm.config import BOT_NAME as bn
-from rythm.config import DURATION_LIMIT
-from rythm.config import UPDATES_CHANNEL as updateschannel
-from rythm.config import que
-from rythm.function.admins import admins as a
-from rythm.helpers.admins import get_administrators
-from rythm.helpers.channelmusic import get_chat_id
-from rythm.helpers.errors import DurationLimitError
-from rythm.helpers.decorators import errors
-from rythm.helpers.decorators import errors
-from rythm.helpers.filters import command, other_filters
-from rythm.helpers.gets import get_file_name
-from rythm.services.callsmusic import callsmusic, queues
-from rythm.services.callsmusic.callsmusic import client as USER
-from rythm.services.converter.converter import convert
-from rythm.services.downloaders import youtube
+from sky-musicbot.config import ARQ_API_KEY
+from sky-musicbot.config import BOT_NAME as bn
+from sky-musicbot.config import DURATION_LIMIT
+from sky-musicbot.config import UPDATES_CHANNEL as updateschannel
+from sky-musicbot.config import que
+from sky-musicbot.function.admins import admins as a
+from sky-musicbot.helpers.admins import get_administrators
+from sky-musicbot.helpers.channelmusic import get_chat_id
+from sky-musicbot.helpers.errors import DurationLimitError
+from sky-musicbot.helpers.decorators import errors
+from sky-musicbot.helpers.decorators import errors
+from sky-musicbot.helpers.filters import command, other_filters
+from sky-musicbot.helpers.gets import get_file_name
+from sky-musicbot.services.callsmusic import callsmusic, queues
+from sky-musicbot.services.callsmusic.callsmusic import client as USER
+from sky-musicbot.services.converter.converter import convert
+from sky-musicbot.services.downloaders import youtube
 
 aiohttpsession = aiohttp.ClientSession()
 chat_id = None
@@ -546,7 +546,7 @@ async def play(_, message: Message):
         )
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/3a434d502a8adac2c8ef9.png"
+        thumb_name = "https://telegra.ph/file/3e0cd0ce0ba1dd4b5d992.jpg"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -589,13 +589,13 @@ async def play(_, message: Message):
                     InlineKeyboardButton("Menu", callback_data="menu"),
                 ],
                 [
-                    InlineKeyboardButton(text="Group", url="https://t.me/RythmSupportGroup"),
+                    InlineKeyboardButton(text="Group", url="https://t.me/GroupSkyMusic"),
                     
                 ],
                 [InlineKeyboardButton(text="Close", callback_data="cls")],
             ]
         )
-        thumb_name = "https://telegra.ph/file/09bcfa88180019caca22c.jpg"
+        thumb_name = "https://telegra.ph/file/3e0cd0ce0ba1dd4b5d992.jpg"
         thumbnail = thumb_name
         requested_by = message.from_user.first_name
         await generate_cover(requested_by, title, views, duration, thumbnail)
@@ -797,7 +797,7 @@ async def deezer(client: Client, message_: Message):
         url = songs.result[0].url
         artist = songs.result[0].artist
         duration = songs.result[0].duration
-        thumbnail = "https://telegra.ph/file/80af8dd490572b6042045.jpg"
+        thumbnail = "https://telegra.ph/file/3e0cd0ce0ba1dd4b5d992.jpg"
 
     except:
         await res.edit("Found Literally Nothing, You Should Work On Your English!")
@@ -909,7 +909,7 @@ async def lol_cb(b, cb):
                 InlineKeyboardButton("Menu", callback_data="menu"),
             ],
             [
-                InlineKeyboardButton(text="Group", url="https://t.me/RythmSupportGroup"),
+                InlineKeyboardButton(text="Group", url="https://t.me/GroupSkyMusic"),
                 
             ],
             [InlineKeyboardButton(text="🗑️ Close", callback_data="cls")],
