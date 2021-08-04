@@ -1,8 +1,8 @@
 {
-  "name": "rythm",
+  "name": "Sky-MusicBot",
   "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by PyTgCalls.",
   "keywords": ["music", "voicechat", "telegram"],
-  "repository": "https://github.com/IrhamFadzillah/rythm-v2",
+  "repository": "https://github.com/Bblitzzz/Sky-MusicBot",
   "stack": "container",
   "buildpacks":  [
     {
@@ -50,7 +50,7 @@
     "BG_IMAGE": {
       "description": "BG image of bot (Use transparent one) [IGNORE].",
       "required": false,
-      "value": " https://telegra.ph/file/3a528c8879789c44627fd.png"
+      "value": " https://telegra.ph/file/3e0cd0ce0ba1dd4b5d992.jpg"
     },     
     "UPDATES_CHANNEL": {
       "description": "Updates Channel without @ [Leave this if you don't have one].",
